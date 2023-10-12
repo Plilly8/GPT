@@ -1,0 +1,25 @@
+import openai
+
+# Замените YOUR_API_KEY на ваш ключ API OpenAI
+api_key = "YOUR_API_KEY"
+
+# Функция для взаимодействия с GPT-3
+def chat_with_gpt(prompt):
+    response = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=prompt,
+        max_tokens=50,
+        api_key=api_key
+    )
+    return response.choices[0].text
+
+if __name__ == "__main__":
+    print("Привет, я ваш бот! Задайте мне вопрос или скажите что-нибудь.")
+
+    while True:
+        user_input = input("Вы: ")
+        if user_input.lower() == "выход":
+            break
+
+        response = chat_with_gpt(user_input)
+        print("Бот:", response)
