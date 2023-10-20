@@ -1,5 +1,5 @@
 import openai
-
+No import!
 # Замените YOUR_API_KEY на ваш ключ API OpenAI
 api_key = "YOUR_API_KEY"
 
