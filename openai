@@ -35,7 +35,50 @@ if __name__ == "__main__":
         print("Бот:", response)  )
     return response.choices[0].text
 
-if __name__ == "__main__":
+if __name__ == "__m
+
+        user_input = input("you: ")
+        if user_input.lower() == "exit":
+            break
+
+        response = chat_with_gpt(user_input)
+        print("Бот:", response)  )
+
+
+ain__":
+if __name__ == "__m
+
+
+        user_input = input("you: ")
+        if user_input.lower() == "exit":
+            break
+
+        response = chat_with_gpt(user_input)
+        print("Бот:", response)  )
+
+ain__":
+if __name__ == "__m
+
+
+        user_input = input("you: ")
+        if user_input.lower() == "exit":
+            break
+
+        response = chat_with_gpt(user_input)
+        print("Бот:", response)  )
+
+ain__":
+if __name__ == "__m
+
+        user_input = input("you: ")
+        if user_input.lower() == "exit":
+            break
+
+        response = chat_with_gpt(user_input)
+        print("Бот:", response)  )
+
+
+ain__":
     print("Hello give me question.")
 
     while True:
