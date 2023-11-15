@@ -2,7 +2,7 @@ import openai
 
 api_key = "YOUR_API_KEY"
 
-
+def chat_with_gpt(prompt):
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=prompt,
@@ -11,80 +11,16 @@ api_key = "YOUR_API_KEY"
     )
     return response.choices[0].text
 
+def main():
+    print("Hello! Give me a question.")
+
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() == "exit":
+            break
+
+        response = chat_with_gpt(user_input)
+        print("Bot:", response)
+
 if __name__ == "__main__":
-    print("Hello give me question.")
-
-    while True:
-        user_input = input("you: ")
-        if user_input.lower() == "exit":
-            break
-
-        response = chat_with_gpt(user_input)
-        print("Бот:", response)  )
-    return response.choices[0].text
-
-if __name__ == "__main__":
-    print("Hello give me question.")
-
-    while True:
-        user_input = input("you: ")
-        if user_input.lower() == "exit":
-            break
-
-        response = chat_with_gpt(user_input)
-        print("Бот:", response)  )
-    return response.choices[0].text
-
-if __name__ == "__m
-
-        user_input = input("you: ")
-        if user_input.lower() == "exit":
-            break
-
-        response = chat_with_gpt(user_input)
-        print("Бот:", response)  )
-
-
-ain__":
-if __name__ == "__m
-
-
-        user_input = input("you: ")
-        if user_input.lower() == "exit":
-            break
-
-        response = chat_with_gpt(user_input)
-        print("Бот:", response)  )
-
-ain__":
-if __name__ == "__m
-
-
-        user_input = input("you: ")
-        if user_input.lower() == "exit":
-            break
-
-        response = chat_with_gpt(user_input)
-        print("Бот:", response)  )
-
-ain__":
-if __name__ == "__m
-
-        user_input = input("you: ")
-        if user_input.lower() == "exit":
-            break
-
-        response = chat_with_gpt(user_input)
-        print("Бот:", response)  )
-
-
-ain__":
-    print("Hello give me question.")
-
-    while True:
-        user_input = input("you: ")
-        if user_input.lower() == "exit":
-            break
-
-        response = chat_with_gpt(user_input)
-        print("Бот:", response)
+    main()
