@@ -8,19 +8,3 @@ def chat_with_gpt(prompt):
         prompt=prompt,
         max_tokens=50,
         api_key=api_key
-    )
-    return response.choices[0].text
-
-def main():
-    print("Hello! Give me a question.")
-
-    while True:
-        user_input = input("You: ")
-        if user_input.lower() == "exit":
-            break
-
-        response = chat_with_gpt(user_input)
-        print("Bot:", response)
-
-if __name__ == "__main__":
-    main()
