@@ -8,3 +8,15 @@ def chat_with_gpt(prompt):
         prompt=prompt,
         max_tokens=50,
         api_key=api_key
+    )
+
+    if 'choices' in response and response['choices']:
+        generated_text = response['choices'][0]['text'].strip()
+        return generated_text
+    else:
+        return "Error: Unable to generate a response."
+
+# Example usage:
+user_prompt = "What is the meaning of life?"
+response_from_gpt = chat_with_gpt(user_prompt)
+print("GPT's response:", response_from_gpt)
