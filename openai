@@ -14,3 +14,17 @@ def chat_with_gpt(prompt):
         generated_text = response['choices'][0]['text'].strip()
         return generated_text
    
+
+ chat_with_gpt(prompt):
+    response = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=prompt,
+        max_tokens=50,
+        api_key=api_key
+    )
+
+    if 'choices' in response and response['choices']:
+        generated_text = response['choices'][0]['text'].strip()
+        return generated_text
+   
+
